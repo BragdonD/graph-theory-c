@@ -50,3 +50,43 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+.vscode/
+
+# CMake generated files
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Visual Studio generated files
+.vs/
+
+# IDE files
+*.suo
+*.user
+*.sln.docstates
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.vcproj
+*.vcproj.user
+
+# Compiled output
+*.exe
+*.dll
+*.so
+*.dylib
+*.out
+*.app
+*.iobj
+*.ipdb
+*.pdb
+*.obj
+*.ilk
+*.lib
+*.a
+
+# Debug files
+*.dSYM/

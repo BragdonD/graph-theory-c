@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "core/vertice.h"
 
@@ -115,4 +116,25 @@ int graph_vertice_set_weight(struct graph_vertice* vertice, int weight)
 
     vertice->weight = weight;
     return 1;
+}
+
+/**
+ * @brief Print a graph vertice
+ * @param vertice The vertice to print
+ * @param func_print_data The function to print the data
+*/
+void graph_vertice_print(struct graph_vertice* vertice, graph_vertice_printer func_print_data)
+{
+    if (vertice == NULL)
+    {
+        perror("graph_vertice_print: vertice is NULL");
+        return;
+    }
+
+    printf("Vertice : {\n");
+    printf("\tId: %d\n", vertice->id);
+    printf("\tWeight: %d\n", vertice->weight);
+    printf("\tData: ");
+    func_print_data(vertice->data);
+    printf("}\n");
 }
